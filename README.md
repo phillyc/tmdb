@@ -1,10 +1,9 @@
 # tmdb
 A simple app to pull movie data from TMDB
 
-Build a popular movie browsing app using Python. 
+Build a popular movie browsing app using Python.
 
-Sign up for a TMDb account and request
-an API key. Use the popular movies endpoint to display a list of the current popular movies in
+Sign up for a [TMDb account and request an API key](https://www.themoviedb.org/documentation/api?language=en). Use the [popular movies endpoint](https://developers.themoviedb.org/3/movies/get-popular-movies) to display a list of the current popular movies in
 your app. Users should be able to select a movie from the list to view details about it.
 
 Your "app" can have any kind of UI you want. The UI should be simple and focus on basic
