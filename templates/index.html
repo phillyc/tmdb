@@ -1,0 +1,25 @@
+<!-- Here we have a standard html file, with a few extra "Jinja" tags. -->
+<!-- All of the Jinja tags are executed by Python at runtime, 
+        allowing us to build this template with some Python sugar. -->
+<!-- http://jinja.pocoo.org/ -->
+<html>
+    <head>
+        <title>TMDB Top 20</title>
+    </head>
+    <body>
+        <h1>The Movie Database</h1>
+        <h2>Top 20 Popular Movies</h2>
+        <ol>
+            <!-- This is a Jinja for loop.
+                 While not as powerful as a native Python loop,
+                 it's still quite nice for managing dynamically generated html elements. -->
+            {% for movie in top_20 %}
+                <!-- We can call the movie dictionary object directly in the template,
+                    by using the dot notation. The double brace syntax is equivalent to print() -->
+                <a href="https://www.themoviedb.org/movie/{{movie.id}}"><li>{{ movie.title }} - {{ movie.popularity }} - {{ movie.release_date }}</li></a>
+                <!-- Try building a <p> tag with the basic {{ movie }} object inside! -->
+            {% endfor %}
+        </ol>
+        <p>It is currently {{ time }}</p>
+    </body>
+</html>
